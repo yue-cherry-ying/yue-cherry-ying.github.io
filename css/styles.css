@@ -1,17 +1,21 @@
-/* Week1 Digital Chalkboard Task #1 Old-School Background and Font color */
-
-
-/* body {
-    background-color: black;
-    color: chartreuse;
-} */
-
-h1 {
-    color: maroon;
+.py-6 {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-#step_three {
-    font-family: 'Amatic SC', cursive;
-    font-family: 'Potta One', cursive;
-    color: cadetblue;
+.spotlight-image {
+    width: 200px;
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.user-image {
+    width: 50px;
+}
+
+.mr-3,
+.mx-3 {
+    margin-right: 1rem!important;
 }
