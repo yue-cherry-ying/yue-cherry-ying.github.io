@@ -13,6 +13,22 @@ h6 {
     text-transform: uppercase;
 }
 
+#title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+.carousel {
+    width: 80%;
+    display: flex!important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: grey;
+}
+
 .card-text:first-letter {
     font-family: 'Cardo', serif;
     float: left;
@@ -20,4 +36,60 @@ h6 {
     line-height: 0.65;
     margin: 0.1em 0.1em 0.2em 0;
     color: #7c1e0e;
+}
+
+.card-body {
+    background-color: rgb(201, 198, 198);
+}
+
+@media only screen and (max-width: 768px) {
+    .card-text {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        grid-row-gap: 100px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-container .wordmark-wrapper {
+        margin-bottom: 30px;
+    }
+    .footer-container .wordmark-wrapper img {
+        width: 215px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .footer-container .wordmark-wrapper {
+        margin-bottom: 15px;
+        padding: 0 10px 0 0;
+    }
+    .footer-container .wordmark-wrapper img {
+        width: 100%;
+    }
+}
+
+
+/* fixed footer */
+
+#footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* hide the footer when screen is small */
+
+@media (max-width: 480px) {
+    #foot {
+        display: none;
+        visibility: hidden;
+    }
+    #footer {
+        display: none;
+        visibility: hidden;
+    }
 }

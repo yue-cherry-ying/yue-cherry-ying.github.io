@@ -14,20 +14,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!-- OPTIONAL: Connect Bootstrap JavaScript and its dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
     <!-- Connect to my own CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Connect to Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
 
+    <!-- Connect to Leaflet Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <!-- Make it responsive to small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Connect to my js file -->
     <script src="js/script.js"></script>
 
-    <title>About</title>
+    <title>Dream of Red Chamber</title>
     <link rel="icon" type="image/png" href="redbook.png">
 </head>
 
-<body>
+<body onload="mapLoad()">
     <!-- navbar -->
     <div class="navbar-nav-scroll">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7c1e0e;">
@@ -82,16 +93,14 @@
         </nav>
     </div>
 
-    <!-- imbed an introductory video -->
-    <div style="background-color: rgb(201, 198, 198);">
-        <iframe width="1120" height="630" style="margin-bottom: -10px; display: block; margin-left: auto; margin-right: auto;" src=" https://www.youtube.com/embed/p-Ode8qL--k " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-            allowfullscreen="allowfullscreen">
-        </iframe>
+    <!-- map API -->
+    <div class="container mt-3">
+        <h1>Map API Example</h1>
+        <div id="map"></div>
     </div>
 
-
     <!-- footer -->
-    <footer id="footer" class="d-none d-md-block text-center p-3 text-light " style="background-color: #7c1e0e; font-family: 'Oswald', sans-serif; text-transform: uppercase; ">
+    <footer id="footer" class="d-none d-md-block text-center p-3 text-light" style="background-color: #7c1e0e; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
         © 2021 Copyright
     </footer>
 
@@ -102,9 +111,9 @@
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
-    -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
+        -->
 </body>
 
 </html>
